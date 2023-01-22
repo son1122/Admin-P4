@@ -217,7 +217,7 @@ export default function Location() {
         <div className={isLoading ? "summary-loading-center" : "grid28"}>
             {isLoading ? (
                 <GridLoader
-                    color={"#ff2531"}
+                    color={"rgba(15,14,159)"}
                     loading={isLoading}
                     size={20}
                     aria-label="Loading Spinner"

@@ -1,23 +1,43 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState, useEffect } from "react"
+import axios from "axios"
+import Fruit from "./components/Fruits"
+import Login from './components/Login/Login';
+import Signup from "./components/Signup/Signup";
+import {Route, Routes, Navigate} from "react-router-dom";
+import Dashboard from "./components/Dashboard/Dashboard";
+import Profile from "./components/Profile/Profile";
 
 function App() {
+
+  const [fruits, setFruits] = useState([])
+
+  const getFruits = () => {
+    console.log(localStorage.getItem("jwt"));
+    axios.get('http://localhost:3010/admin/', {
+      headers: {Authorization: `Bearer ${localStorage.getItem("jwt")}`}
+    })
+    .then(res => {
+
+      console.log(res.data);
+
+    })
+  }
+
+  useEffect(() => {
+    getFruits()
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+          <Route path="/" element={ <Navigate to="/login" /> } />
+          <Route path="/signup" element={<Signup/>}/>
+          <Route path="/login" element={<Login/>} />
+          <Route path="/dashboard" element={<Dashboard/>} />
+          <Route path="/profile" element={<Profile/>} />
+            <Route path="*" element={<Login/>} />
+      </Routes>
     </div>
   );
 }
