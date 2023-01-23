@@ -49,10 +49,12 @@ This Website is for customer to SignUp Login and Buy Insurance from Dhipaya
       
 <h2>Preview</h2>
 
-<img width="1001" alt="Screenshot 2566-01-23 at 08 30 12" src="https://user-images.githubusercontent.com/76699506/213952246-9b80ec93-dd3c-4f22-933f-85310705736e.png">
-<img width="998" alt="Screenshot 2566-01-23 at 08 30 28" src="https://user-images.githubusercontent.com/76699506/213952263-73e49a42-d268-426f-8f46-6e760ed2a144.png">
-<img width="1411" alt="Screenshot 2566-01-23 at 08 30 50" src="https://user-images.githubusercontent.com/76699506/213952288-365d7ad8-32f0-4848-8349-034734f30696.png">
+<img width="1001" alt="Screenshot 2566-01-23 at 09 35 11" src="https://user-images.githubusercontent.com/76699506/213956955-fecb584a-1555-47a8-ba69-715aba21f492.png">
 
+<img width="952" alt="Screenshot 2566-01-23 at 09 35 24" src="https://user-images.githubusercontent.com/76699506/213956973-c721cb79-572a-4e0e-a469-e5149300978d.png">
+
+<img width="969" alt="Screenshot 2566-01-23 at 09 35 42" src="https://user-images.githubusercontent.com/76699506/213957000-2038174f-491a-4d73-afbe-40341ab96d5b.png">
+<img width="964" alt="Screenshot 2566-01-23 at 09 35 56" src="https://user-images.githubusercontent.com/76699506/213957027-42326923-065f-4e47-9585-3598567f2cd2.png">
 
 Netlify Deploy URL : [Application](https://local-wongsatorn.netlify.app/)
 
@@ -65,6 +67,8 @@ Netlify Deploy URL : [Application](https://local-wongsatorn.netlify.app/)
     2.1 UI/UX For website
     
     2.2 Responsive
+    
+    2.3 What Function is Admin Need
     
 
 <h3>3. make a simple step plan</h3>
@@ -85,7 +89,7 @@ Netlify Deploy URL : [Application](https://local-wongsatorn.netlify.app/)
 
 What would you do differently?
 
-    1. API Planing
+    1. API Planing and Database Relation
 
 What are you most proud of?
 
@@ -93,9 +97,7 @@ What are you most proud of?
 
 What would you do next?
 
-    1. Add Langague Localization and connect to translation service
-    
-    2. Add Chart and Graph for more Visualization Data
+    1. Add Chart and Graph for more Visualization Data
 
 What did you learn?
 
