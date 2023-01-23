@@ -1,3 +1,38 @@
+
+
+<h3>Application Stories</h3>
+
+User Stories
+
+      1. I want customers to be able to buy insurance
+      
+      2. I want customers to be able to monitor the status of the insurance
+      
+      3. I want customers to make less action as possible for their purchase
+      
+      4. where customer purchase insurance. I want website to lightweight and responsive
+      
+Company Stories
+
+      1. Company want to sale insurance
+      
+      2. Company want to expand business to other country
+      
+      3. Company want an abblity to manage and add insurance
+      
+      4. Manager and Executive want to monitor status on Realtime Operation
+
+
+<h3>Application Stories</h3>
+
+In order to archieve the user and company stories above i need to plan more on website Architecure and my solution is seperate stack in 4 Individual part and have ablity to deploy it with CI/CD Pipeline to different Server
+      
+      
+  1. International Static Website for Company to show capability and Product (Fronted REACT JS+ANTD)[Repository](https://github.com/son1122/Customer-P4)
+  2. Localization web with ability to sell Insurance and has account to monitor it (Fronted REACT JS) [Repository](https://github.com/son1122/Main-P4)
+  3. Admin Portal for employee to manage and monitor Insurance (Fronted REACT JS) [Repository](https://github.com/son1122/Admin-P4)
+  4. Backend(Data Server) With RESTful API to feed json to Fronted Website (Express JS) [Repository](https://github.com/son1122/Backend-P4)
+
 <h1 style="font-size:300%;"><img width="100" alt="Screenshot 2565-11-16 at 14 05 55" src="https://fact-link.com/home/dhipaya/logo.png"> Dhipaya</h1>
 
 
@@ -9,11 +44,7 @@ This Website is for customer to explore a information on dhipaya insurance compa
       2. Animation
       3. Responsive
       4. Hyperlink to Customer Portal
-
-<h3>User Stories</h3>
-
-
-
+      
 <h2>Preview</h2>
 <img width="1184" alt="Screenshot 2566-01-23 at 07 33 17" src="https://user-images.githubusercontent.com/76699506/213949005-5329cd4b-691b-4ce3-b3d1-e5289acc9568.png">
 <img width="1182" alt="Screenshot 2566-01-23 at 07 33 01" src="https://user-images.githubusercontent.com/76699506/213949001-c01cdcf5-d4e0-4e05-a7fe-c90252d26c7e.png">
