@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+<h1 style="font-size:300%;"><img width="100" alt="Screenshot 2565-11-16 at 14 05 55" src="https://fact-link.com/home/dhipaya/logo.png"> Dhipaya</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+This Website is for customer to explore a information on dhipaya insurance company
 
-In the project directory, you can run:
+<h3>Feature</h3>
 
-### `npm start`
+      1. Static Website on REACT JS
+      2. Animation
+      3. Responsive
+      4. Hyperlink to Customer Portal
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<h3>User Stories</h3>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h2>Preview</h2>
+<img width="1184" alt="Screenshot 2566-01-23 at 07 33 17" src="https://user-images.githubusercontent.com/76699506/213949005-5329cd4b-691b-4ce3-b3d1-e5289acc9568.png">
+<img width="1182" alt="Screenshot 2566-01-23 at 07 33 01" src="https://user-images.githubusercontent.com/76699506/213949001-c01cdcf5-d4e0-4e05-a7fe-c90252d26c7e.png">
+<img width="1275" alt="Screenshot 2566-01-23 at 07 32 29" src="https://user-images.githubusercontent.com/76699506/213948957-f360c153-dbc9-4f2e-ac47-fcc0a3873c7e.png">
 
-### `npm run build`
+<img width="1217" alt="Screenshot 2566-01-23 at 07 32 10" src="https://user-images.githubusercontent.com/76699506/213948946-d87d7a15-8890-4614-a9ff-b4cba7e7a28d.png">
+<img width="1202" alt="Screenshot 2566-01-23 at 07 32 43" src="https://user-images.githubusercontent.com/76699506/213948975-c10d5525-1a0f-411a-8bc4-b9aa729254e0.png">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+Netlify Deploy URL : [https://customer-wongsatorn.netlify.app/)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<h2>My Planing Step</h2>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<h3>1. List All requirement and draw a Wireframe</h3>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<h3>2. make a List of technical difficulties and study all of them</h3>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    2.1 How ANT Design Work
+    
+    2.2 UI/UX For website
+    
+    2.3 Setup Library for Deploye
 
-### Code Splitting
+<h3>3. make a simple step plan</h3>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    3.1 initial project with create-react-app
+    
+    3.2 Set up with ant design library
+    
+    3.3 Test package and run on Local Machine
+    
+    3.4 Deploy on Netlify.com Using CI/CD Pipeline
+    
+    3.5 Create new ui and customize component
+    
+    3.6 Add Content
+    
+    3.7 Deply New Change
+    
+<h2>Code Explain</h2>
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## GA Question
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+What would you do differently?
 
-### Advanced Configuration
+    1.Add more customization to UI/UX
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+What are you most proud of?
 
-### Deployment
+    1. Study and Use UI Library
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+What would you do next?
 
-### `npm run build` fails to minify
+    1. Add Langague Localization and connect to translation service
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+What did you learn?
+
+    1. Ant Design Library (Ant Group) - The world's second most popular React UI library
+            An enterprise-class UI design language and React UI library with a set of high-quality 
+    React components, one of best React UI library for enterprises.
