@@ -26,6 +26,7 @@ const Dashboard = (props) => {
     const[addCarType2,setAddCarType2]=useState("")
     const[addCarType3,setAddCarType3]=useState('')
 
+    const[editId,setEditId]=useState(0)
     const[editCarBrand,seteditCarBrand]=useState("")
     const[editCarYear,seteditCarYear]=useState("")
     const[editCarModel,seteditCarModel]=useState("")
@@ -33,12 +34,15 @@ const Dashboard = (props) => {
     const[editCarType2,seteditCarType2]=useState("")
     const[editCarType3,seteditCarType3]=useState("")
 
+    const[claim,setClaim]=useState()
+    const[claimId,setClaimId]=useState()
   const handleChange = (e) => {
     setFormData((prevState) => ({
       ...prevState,
       [e.target.name]: e.target.value,
     }));
   };
+
     const addCar =()=>{
         axios.post("http://localhost:3010/admin/addcar/", {
                 headers: {Authorization: `Bearer ${localStorage.getItem("jwt")}`},
@@ -97,6 +101,21 @@ const Dashboard = (props) => {
                 setListCar(data)
             })
     },[])
+    useEffect(()=>{
+        console.log(editId)
+        axios.post("http://localhost:3010/admin/geteditinsure",{
+            id:editId
+        }).then(a=>{
+            console.log(a)
+            seteditCarType1(a.data[0].price)
+            seteditCarType2(a.data[1].price)
+            seteditCarType3(a.data[2].price)
+            seteditCarYear(a.data[0].CarModel.year)
+            seteditCarBrand(a.data[0].CarModel.brand)
+            seteditCarModel(a.data[0].CarModel.model)
+        })
+    },[editId])
+    useEffect(()=>{},[editCarBrand])
     useEffect(() => {
         const select = axios
             .get("http://localhost:3010/admin/dashboarddata/", {
@@ -274,25 +293,26 @@ const Dashboard = (props) => {
               </div>:<></>}
               {select==2?<div>
                   <h1>Edit Insurance</h1>
-
+                    <h3>Car Model ID</h3>
+                  <input type={"text"} placeholder={"Insert Insurance ID"} onChange={e=>setEditId(e.target.value)}/>
                   <div  style={{width:"80vw",marginLeft:"10vw",display:"grid",gridTemplateColumns:"50% 50%"}}>
                       <div>
                           <h3>Car Data</h3>
                           <p>Edit Car Brand</p>
-                          <input type={"text"} onChange={(e)=>seteditCarBrand(e.target.value)} />
+                          <input type={"text"} onChange={(e)=>seteditCarBrand(e.target.value)} value={editCarBrand}/>
                           <p>Edit Car Model</p>
-                          <input type={"text"} onChange={(e)=>seteditCarModel(e.target.value)}/>
+                          <input type={"text"} onChange={(e)=>seteditCarModel(e.target.value)} value={editCarModel}/>
                           <p>Edit Car Year</p>
-                          <input type={"text"} onChange={(e)=>seteditCarYear(e.target.value)}/>
+                          <input type={"text"} onChange={(e)=>seteditCarYear(e.target.value)} value={editCarYear}/>
                       </div>
                       <div>
                           <h3>Price Data</h3>
                           <p>Edit Type 1 Insurance Price</p>
-                          <input type={"text"} onChange={(e)=>seteditCarType1(e.target.value)}/>
+                          <input type={"text"} onChange={(e)=>seteditCarType1(e.target.value)} value={editCarType1}/>
                           <p>Edit Type 2 Insurance Price</p>
-                          <input type={"text"} onChange={(e)=>seteditCarType2(e.target.value)}/>
+                          <input type={"text"} onChange={(e)=>seteditCarType2(e.target.value)} value={editCarType2}/>
                           <p>Edit Type 3 Insurance Price</p>
-                          <input type={"text"} onChange={(e)=>seteditCarType3(e.target.value)}/>
+                          <input type={"text"} onChange={(e)=>seteditCarType3(e.target.value)} value={editCarType3}/>
                       </div>
                   </div>
                   <br/>
@@ -300,7 +320,23 @@ const Dashboard = (props) => {
 
               </div>:<></>}
               {select==3?<div>
-
+                    <h1>Add Customer Claim</h1>
+                  <p>Insurance Id</p>
+                  <input type={"text"} onChange={e=>setClaimId(e.target.value)}/>
+                  <p>Claim Price</p>
+                  <input type={"text"} onChange={e=>setClaim(e.target.value)}/><br/><br/>
+                  <button onClick={()=>{
+                  axios.post("http://localhost:3010/admin/claim",{
+                      id:claimId,
+                      price:claim
+                  }).then(e=>{
+                      alert("Add Claim")
+                  }).catch(e=>{
+                      console.log(e)
+                      alert("Error")
+                  })
+                  }
+                  }>ADD CLAIM</button>
               </div>:<></>}
           </div>
       </div>
