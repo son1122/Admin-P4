@@ -14,7 +14,7 @@ function App() {
 
   const getFruits = () => {
     console.log(localStorage.getItem("jwt"));
-    axios.get('http://localhost:3010/admin/', {
+    axios.get('https://good-puce-kitten-sari.cyclic.app/admin/', {
       headers: {Authorization: `Bearer ${localStorage.getItem("jwt")}`}
     })
     .then(res => {

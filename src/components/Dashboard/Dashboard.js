@@ -44,7 +44,7 @@ const Dashboard = (props) => {
   };
 
     const addCar =()=>{
-        axios.post("http://localhost:3010/admin/addcar/", {
+        axios.post("https://good-puce-kitten-sari.cyclic.app/admin/addcar/", {
                 headers: {Authorization: `Bearer ${localStorage.getItem("jwt")}`},
                 brand:addCarBrand,
                 model:addCarModel,
@@ -58,7 +58,7 @@ const Dashboard = (props) => {
             })
     }
     const editCar =()=>{
-        axios.post("http://localhost:3010/admin/insure/", {
+        axios.post("https://good-puce-kitten-sari.cyclic.app/admin/insure/", {
             headers: {Authorization: `Bearer ${localStorage.getItem("jwt")}`},
             brand:editCarBrand,
             model:editCarModel,
@@ -73,7 +73,7 @@ const Dashboard = (props) => {
     }
     useEffect(() => {
         const select = axios
-            .get("http://localhost:3010/admin/getcarmodel/", {
+            .get("https://good-puce-kitten-sari.cyclic.app/admin/getcarmodel/", {
                 headers: {Authorization: `Bearer ${localStorage.getItem("jwt")}`},
             })
             .then((resu) => {
@@ -103,7 +103,7 @@ const Dashboard = (props) => {
     },[])
     useEffect(()=>{
         console.log(editId)
-        axios.post("http://localhost:3010/admin/geteditinsure",{
+        axios.post("https://good-puce-kitten-sari.cyclic.app/admin/geteditinsure",{
             id:editId
         }).then(a=>{
             console.log(a)
@@ -118,7 +118,7 @@ const Dashboard = (props) => {
     useEffect(()=>{},[editCarBrand])
     useEffect(() => {
         const select = axios
-            .get("http://localhost:3010/admin/dashboarddata/", {
+            .get("https://good-puce-kitten-sari.cyclic.app/admin/dashboarddata/", {
                 headers: {Authorization: `Bearer ${localStorage.getItem("jwt")}`},
             })
             .then((resu) => {
@@ -156,7 +156,7 @@ const Dashboard = (props) => {
             });
         let claimCost=0
         const claim = axios
-            .get("http://localhost:3010/admin/claim/", {
+            .get("https://good-puce-kitten-sari.cyclic.app/admin/claim/", {
                 headers: {Authorization: `Bearer ${localStorage.getItem("jwt")}`},
             })
             .then((resu) => {
@@ -326,7 +326,7 @@ const Dashboard = (props) => {
                   <p>Claim Price</p>
                   <input type={"text"} onChange={e=>setClaim(e.target.value)}/><br/><br/>
                   <button onClick={()=>{
-                  axios.post("http://localhost:3010/admin/claim",{
+                  axios.post("https://good-puce-kitten-sari.cyclic.app/admin/claim",{
                       id:claimId,
                       price:claim
                   }).then(e=>{

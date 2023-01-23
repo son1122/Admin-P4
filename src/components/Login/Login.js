@@ -16,7 +16,7 @@ const Login = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3010/admin/login", formData)
+      .post("https://good-puce-kitten-sari.cyclic.app/admin/login", formData)
       .then((res) => {
         console.log(res.data);
         let token = res.data;
