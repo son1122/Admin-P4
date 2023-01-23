@@ -36,16 +36,17 @@ In order to archieve the user and company stories above i need to plan more on w
 <h1 style="font-size:300%;"><img width="100" alt="Screenshot 2565-11-16 at 14 05 55" src="https://fact-link.com/home/dhipaya/logo.png"> Dhipaya</h1>
 
 
-This Website is for customer to SignUp Login and Buy Insurance from Dhipaya
+This Website is for Admin to monitor/add/adjust Insurance and also make claim for Customer
 
 <h3>Feature</h3>
 
       1. Account with Signup Login Logout Edit Delete 
-      2. Simple DashBoard
-      3. Buy Insurance Menu
-      4. Location for building
+      2. Add Insurance
+      3. Edit insurance
+      4. Add claim for customer
       5. Responsive
       6. Authentication Using JWT
+      7. Simple Dashboard
       
 <h2>Preview</h2>
 
