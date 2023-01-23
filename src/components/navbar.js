@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import GoogleMapReact from "google-map-react";
 import axios from "axios";
 
 import GridLoader from "react-spinners/GridLoader";
-const AnyReactComponent = ({ text }) => (
+
+const AnyReactComponent = ({text}) => (
     <div>
         <img
-            style={{ width: "50px" }}
+            style={{width: "50px"}}
             src={"https://static.thenounproject.com/png/2900961-200.png"}
         />
         <h3
@@ -25,10 +26,10 @@ const AnyReactComponent = ({ text }) => (
     </div>
 );
 
-const Restaurant = ({ text }) => (
+const Restaurant = ({text}) => (
     <div>
         <img
-            style={{ width: "50px" }}
+            style={{width: "50px"}}
             src={
                 "https://images-ext-1.discordapp.net/external/c_QEmvWUPQdNab70SuGaBY6WwgJssu1ErqJ3UNq0VzA/https/cdn-icons-png.flaticon.com/512/6985/6985073.png"
             }
@@ -48,10 +49,10 @@ const Restaurant = ({ text }) => (
         </h3>
     </div>
 );
-const Seller = ({ text }) => (
+const Seller = ({text}) => (
     <div>
         <img
-            style={{ width: "50px" }}
+            style={{width: "50px"}}
             src={
                 "https://images-ext-1.discordapp.net/external/jU-HDJjboHvK7lMvC_BkBSX62LeLJsRGNFUl8kWzk-w/https/cdn-icons-png.flaticon.com/512/8365/8365935.png"
             }
@@ -71,10 +72,10 @@ const Seller = ({ text }) => (
         </h4>
     </div>
 );
-const Customer = ({ text }) => (
+const Customer = ({text}) => (
     <div>
         <img
-            style={{ width: "50px" }}
+            style={{width: "50px"}}
             src={
                 "https://images-ext-1.discordapp.net/external/ial0BMhDeZBdOFlvSCFX3qQUX15kk8nn3y-wDgXku-4/https/cdn-icons-png.flaticon.com/512/3305/3305843.png"
             }
@@ -112,15 +113,15 @@ export default function Location() {
         zoom: 14,
     };
     const [dataSeller, setDataSeller] = useState(
-        <Customer lat={13} lng={100} text={"ton"} />
+        <Customer lat={13} lng={100} text={"ton"}/>
     );
     const [dataCustomer, setDataCustomer] = useState(
-        <Customer lat={13} lng={100} text={"ton"} />
+        <Customer lat={13} lng={100} text={"ton"}/>
     );
     const [tag, setTag] = useState(
-        <div style={{ height: "90vh", width: "100%" }}>
+        <div style={{height: "90vh", width: "100%"}}>
             <GoogleMapReact
-                bootstrapURLKeys={{ key: process.env.REACT_APP_MAP_API }}
+                bootstrapURLKeys={{key: process.env.REACT_APP_MAP_API}}
                 defaultCenter={defaultProps.center}
                 defaultZoom={defaultProps.zoom}
             >
@@ -139,7 +140,7 @@ export default function Location() {
             .get(
                 "https://backend-sei-project-3.cyclic.app/dashboard/location/seller",
                 {
-                    headers: { Authorization: `Bearer ${localStorage.getItem("jwt")}` },
+                    headers: {Authorization: `Bearer ${localStorage.getItem("jwt")}`},
                 }
             )
             .then((resSeller) => {
@@ -153,15 +154,16 @@ export default function Location() {
                         />
                     );
                 });
-                console.log(tagSell);
+                // console.log(tagSell);
                 setDataSeller(tagSell);
             })
-            .catch((e) => {});
+            .catch((e) => {
+            });
         axios
             .get(
                 "https://backend-sei-project-3.cyclic.app/dashboard/location/customer",
                 {
-                    headers: { Authorization: `Bearer ${localStorage.getItem("jwt")}` },
+                    headers: {Authorization: `Bearer ${localStorage.getItem("jwt")}`},
                 }
             )
             .then((resCustomer) => {
@@ -178,10 +180,11 @@ export default function Location() {
                 });
                 setDataCustomer(tagCust);
             })
-            .catch((e) => {});
+            .catch((e) => {
+            });
         setTag(
             <GoogleMapReact
-                bootstrapURLKeys={{ key: "AIzaSyCSFKSxVPPBC2iwdNQ58GRCfhdlnDFbgtI" }}
+                bootstrapURLKeys={{key: "AIzaSyCSFKSxVPPBC2iwdNQ58GRCfhdlnDFbgtI"}}
                 defaultCenter={defaultProps.center}
                 defaultZoom={defaultProps.zoom}
             >
@@ -199,7 +202,7 @@ export default function Location() {
     useEffect(() => {
         setTag(
             <GoogleMapReact
-                bootstrapURLKeys={{ key: "AIzaSyCSFKSxVPPBC2iwdNQ58GRCfhdlnDFbgtI" }}
+                bootstrapURLKeys={{key: "AIzaSyCSFKSxVPPBC2iwdNQ58GRCfhdlnDFbgtI"}}
                 defaultCenter={defaultProps.center}
                 defaultZoom={defaultProps.zoom}
             >
@@ -224,7 +227,7 @@ export default function Location() {
                     data-testid="loader"
                 />
             ) : (
-                <div style={{ height: "90vh" }}>{tag}</div>
+                <div style={{height: "90vh"}}>{tag}</div>
             )}
         </div>
     );

@@ -15,7 +15,7 @@ const Fruit = props => {
     return (
         <div>
             <h1>Fruits</h1>
-            <FruitForm />
+            <FruitForm/>
             <div>{allFruits}</div>
         </div>
     )

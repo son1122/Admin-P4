@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, {useState} from "react"
 import axios from "axios"
 
 const Login = props => {
@@ -18,19 +18,19 @@ const Login = props => {
         axios.post("https://good-puce-kitten-sari.cyclic.app/admin/login", formData, {
             headers: {Authorization: `Bearer ${localStorage.getItem("jwt")}`}
         })
-        .then(res => {
-            console.log(res.data);
-            let token = res.data
-            localStorage.setItem("jwt", token)
-        })
+            .then(res => {
+                // console.log(res.data);
+                let token = res.data
+                localStorage.setItem("jwt", token)
+            })
     }
 
     return (
         <div>
             <h1>Login</h1>
             <form onSubmit={handleSubmit}>
-                <input type="text" name="username" onChange={handleChange}  placeholder="username"/>
-                <input type="text" name="password" onChange={handleChange}  placeholder="password"/>
+                <input type="text" name="username" onChange={handleChange} placeholder="username"/>
+                <input type="text" name="password" onChange={handleChange} placeholder="password"/>
                 <input type="submit" value="Login"/>
             </form>
         </div>
